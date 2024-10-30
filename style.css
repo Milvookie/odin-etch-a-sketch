@@ -17,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 #drawingArea {
@@ -29,6 +30,21 @@ body {
 
 .grid-unit {
     background-color: gold;
-    width: 25%;
-    height: 25%;
+}
+
+#settings {
+    border: 2px solid green;
+}
+
+#grid-size {
+    border: 2px solid cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+#grid-size input {
+    margin-top: 4px;
 }
