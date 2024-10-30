@@ -2,42 +2,44 @@ const drawingArea = document.querySelector('#drawingArea')
 const inputOfGridSize = document.getElementById('grid-size-input')
 
 inputOfGridSize.addEventListener('change', (e) => {
-    console.log(e.target.value);
     createGrid(e.target.value)
-    
 })
 
 function createGrid(num) {
     const totalSquares = num * num
-    const areaHeight = drawingArea.clientHeight
-    const areaWidth = drawingArea.clientWidth
+
     let gridElement = []
     for (let index = 0; index < totalSquares; index++) {
         let unit = document.createElement('div')
         unit.className = 'grid-unit'
-        unit.style.height = areaHeight / num + 'px'
-        unit.style.width = areaWidth / num + 'px'
+        unit.style.height = (100 / num) + '%'
+        unit.style.width = (100 / num) + '%'
         gridElement.push(unit)
     }
-
+    displayGridSize()
     drawingArea.replaceChildren(...gridElement)
+}
 
-    let textOfGridSize = document.querySelector('#grid-size label')
-    textOfGridSize.innerText = `${inputOfGridSize.value} by ${inputOfGridSize.value}`    
+function displayGridSize() {
+    const textOfGridSize = document.querySelector('#grid-size label')
+    textOfGridSize.innerText = `${inputOfGridSize.value} by ${inputOfGridSize.value}`
 }
 
 
 drawingArea.addEventListener('mouseover', (e) => {
     if (e.target.className == 'grid-unit') {
-        e.target.style.backgroundColor = 'black';   
+        e.target.style.backgroundColor = 'black';
     }
 })
+
+
+
 
 function draw() {
 }
 
+createGrid(inputOfGridSize.value)
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('loaded');
-    createGrid(inputOfGridSize.value)
 })
