@@ -14,6 +14,28 @@
             <label for="grid-size-input">Grid size:</label>
             <input type="range" id="grid-size-input" name="grid" value="16" min="8" max="100">
         </div>
+        <div id="drawing-options">
+            <fieldset>
+                <legend>Select a color for your drawing</legend>
+
+                <div>
+                    <input type="radio" id="black" name="color" value="black" checked />
+                    <label for="black">Black</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="random" name="color" value="random" />
+                    <label for="random">Random</label>
+                </div>
+    
+                <div>
+                    <input type="radio" id="rainbow" name="color" value="rainbow" />
+                    <label for="rainbow">Rainbow</label>
+                </div>
+            </fieldset>
+
+        </div>
+        
     </div>
     <script src="./main.js"></script>
 </body>

@@ -21,6 +21,7 @@ body {
     color: white;
 }
 
+
 #drawingArea {
     border: 32px solid red;
     height: 80%;
@@ -34,11 +35,12 @@ body {
 }
 
 #settings {
-    border: 2px solid green;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
 }
 
 #grid-size {
-    border: 2px solid cornflowerblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,4 +50,24 @@ body {
 
 #grid-size input {
     margin-top: 4px;
+}
+
+fieldset {
+    display: flex;
+}
+
+fieldset div {
+    padding: 8px 16px;
+}
+
+#drawing-options {
+    padding: 8px;
+}
+
+#drawing-options input {
+    margin: 0.4rem;
+}
+
+#drawing-options label {
+    margin-right: 0.6rem;
 }
